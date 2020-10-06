@@ -1,0 +1,15 @@
+application:
+  name: db-requester
+  project: ${RANDOM_STR_PLACEHOLEDR}
+  cloud_region: "aws/eu-west-3"
+  publicly_accessible: true
+routers:
+  - name: main
+    routes:
+      - application_name: db-requester
+        paths:
+          - /*
+databases:
+  - type: mysql
+    version: "5.3"
+    name: my-mysql
